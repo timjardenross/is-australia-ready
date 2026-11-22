@@ -96,9 +96,9 @@ def render_doc(slug):
     d = docs[slug]
     md = markdown.Markdown(extensions=["tables", "sane_lists", "toc"], extension_configs={"toc": {"toc_depth": "2-3"}})
     body = md.convert(tokens(d["body"]))
+    body = re.sub(r"<table>", '<div class="tablewrap"><table>', body); body = body.replace("</table>", "</table></div>")
     body = body.replace("<p>{{catalogue_table}}</p>", sources_table()).replace("<p>{{findings_table}}</p>", findings_table())
     assert "{{" not in body, f"unresolved token in {slug}"
-    body = re.sub(r"<table>", '<div class="tablewrap"><table>', body); body = body.replace("</table>", "</table></div>")
     body = link_ids(body)
     head = f'<p class="kicker">{esc(d["meta"]["kicker"])}</p><h1>{esc(d["meta"]["title"])}</h1>'
     toc = md.toc if slug == "d2" or body.count("<h2") > 3 else ""
