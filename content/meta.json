@@ -1,0 +1,12 @@
+{
+  "site_title": "Is Australia Ready?",
+  "subtitle": "National resilience, preparedness and systemic risk, 2026",
+  "evidence_cutoff": "19 November 2026",
+  "revision": "1.0 (first final)",
+  "released": "22 November 2026",
+  "author": "TJR",
+  "disclosure": "Drafted with AI assistance. The author reviewed the claims and judgements, and cited sources were checked against the pages they link to, with any limit recorded in the source catalogue.",
+  "changelog": [
+    {"date": "2026-11-22", "revision": "1.0", "change": "First final release of Deliverables 1 to 6, the 56-source catalogue (S01 to S56) and the 45-finding register (F01 to F45). AusAlert date reconciled to 1 October 2026. F152 recomputed on register revision 34 (42 of 90, 47%)."}
+  ]
+}
