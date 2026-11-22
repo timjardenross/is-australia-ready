@@ -1,0 +1,1706 @@
+[
+ {
+  "id": "T-2025-001",
+  "start": "2025-03-20",
+  "end": "2025-03-21",
+  "name": "North Hyde substation fire, Heathrow closure",
+  "operator": "National Grid / Heathrow Airport",
+  "region": "Europe incl. UK",
+  "subtype": "Physical or environmental",
+  "cause": "Transformer bushing failure, moisture ingress; preventable fault known ~7 years earlier (NESO final report)",
+  "cause_status": "Confirmed (official review)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.neso.energy/national-energy-system-operator-publishes-final-report-review-north-hyde-substation-outage",
+   "https://www.expressandstar.com/uk-news/2025/07/02/substation-fire-that-shut-heathrow-airport-was-preventable-says-watchdog-report",
+   "https://globalnews.ca/news/11269776/heathrow-airport-fire-cause-report"
+  ]
+ },
+ {
+  "id": "T-2025-002",
+  "start": "2025-06-12",
+  "end": "2025-06-12",
+  "name": "Google Cloud Service Control failure, with Cloudflare Workers KV knock-on",
+  "operator": "Google Cloud; Cloudflare",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Policy change inserted into regional Spanner tables triggered null-pointer crash loop in Service Control; no feature flag (Google incident report)",
+  "cause_status": "Confirmed (vendor post-incident report)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW",
+   "https://www.thousandeyes.com/blog/google-cloud-outage-analysis-june-12-2025",
+   "https://www.theregister.com/2025/06/12/google_cloudflare_outage/"
+  ]
+ },
+ {
+  "id": "T-2026-004",
+  "start": "2026-10-20",
+  "end": "2026-10-20",
+  "name": "Google Cloud europe-west2-b power event",
+  "operator": "Google Cloud",
+  "region": "Europe incl. UK",
+  "subtype": "Power",
+  "cause": "Power event; secondary reporting says generators did not take over (PLC configuration) during maintenance that reduced resilience",
+  "cause_status": "Confirmed (Google root-cause update of 4 Nov 2026, as reported by The Register)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://datacenterdynamics.com/en/news/google-experiences-service-disruption-in-uk-cloud-region",
+   "https://www.theregister.com/a/5307739",
+   "https://technologymagazine.com/news/the-google-cloud-outage-what-industry-experts-have-to-say"
+  ]
+ },
+ {
+  "id": "T-2025-005",
+  "start": "2025-04-28",
+  "end": "2025-04-29",
+  "name": "Iberian Peninsula blackout",
+  "operator": "Red Eléctrica; REN; Iberian generators",
+  "region": "Europe incl. UK",
+  "subtype": "Power",
+  "cause": "Multiple interacting factors: voltage control, oscillations, cascading generation disconnections on overvoltage (ENTSO-E final report, 20 Mar 2026)",
+  "cause_status": "Confirmed (expert panel final report); most individual trips unexplained",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://www.entsoe.eu/publications/blackout/9-may-2025-iberian-blackout/",
+   "https://www.euronews.com/2026/03/20/perfect-storm-of-multiple-factors-behind-2025-iberia-power-blackout-experts-say",
+   "https://www.tdworld.com/reliability-and-resiliency/article/55387488/the-iberian-outage-a-unique-and-perplexing-event"
+  ]
+ },
+ {
+  "id": "T-2025-006",
+  "start": "2025-10-19",
+  "end": "2025-10-20",
+  "name": "AWS us-east-1 DynamoDB DNS failure",
+  "operator": "Amazon Web Services",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Latent race condition in DynamoDB DNS management automation left an empty regional endpoint record; cascaded to EC2 launches and NLB (AWS post-event summary)",
+  "cause_status": "Confirmed (vendor post-event summary)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://aws.amazon.com/message/101925",
+   "https://www.theregister.com/2025/10/23/amazon_outage_postmortem/",
+   "https://www.thousandeyes.com/blog/aws-outage-analysis-october-20-2025"
+  ]
+ },
+ {
+  "id": "T-2025-007",
+  "start": "2025-11-18",
+  "end": "2025-11-18",
+  "name": "Cloudflare Bot Management feature file outage",
+  "operator": "Cloudflare",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Database permissions change duplicated rows in Bot Management feature file; doubled file exceeded proxy limit and crashed routing software (Cloudflare post-mortem). Initially suspected as DDoS.",
+  "cause_status": "Confirmed (vendor post-mortem); not an attack",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://blog.cloudflare.com/18-november-2025-outage/",
+   "https://www.thousandeyes.com/blog/cloudflare-outage-analysis-november-18-2025",
+   "https://www.engadget.com/cybersecurity/cloudflare-outage-was-not-caused-by-a-cyber-attack-053000551.html"
+  ]
+ },
+ {
+  "id": "T-2025-011",
+  "start": "2025-09-18",
+  "end": "2025-09-18",
+  "name": "Optus Triple Zero outage (firewall upgrade)",
+  "operator": "Optus (Singtel); Nokia (outsourced provider)",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Firewall upgrade blocked 000 call path; independent report found at least ten mistakes; 16th of 18 planned upgrades; incorrect instructions to Nokia",
+  "cause_status": "Confirmed (independent report, per The Register; Senate estimates statement)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.aph.gov.au/-/media/Estimates/ec/supp2526/1_DITRDCSA_Opening_Statement.pdf",
+   "https://www.theregister.com/2025/12/19/optus_emergency_outages_cause_report/",
+   "https://www.itnews.com.au/news/optus-13-hour-outage-in-2025-lands-it-back-in-court-627793"
+  ]
+ },
+ {
+  "id": "T-2026-005",
+  "start": "2026-07-08",
+  "end": "2026-07-08",
+  "name": "Telstra national mobile outage (time-sync defect)",
+  "operator": "Telstra",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "A planned maintenance job on Telstra's network timing system spread incorrect date information through parts of the mobile network; root issue was timing not treated as a critical function",
+  "cause_status": "Confirmed (independent external investigation commissioned by Telstra)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.telstra.com.au/content/dam/tcom/dynamic-media-projects/luke-campbell/TAP-Findings-for-Telstra-Outage.pdf",
+   "https://www.techrepublic.com/article/news-telstra-software-defect-network-outage-australia-apac/",
+   "https://thenightly.com.au/australia/telstras-network-outage-sparks-morning-of-chaos-chief-says-it-can-still-be-trusted-c-22548939",
+   "https://ground.news/article/telstra-outage-in-australia-disrupts-trains-and-payments-no-evidence-of-malicious-activity_1d8c6b"
+  ]
+ },
+ {
+  "id": "T-2025-013",
+  "start": "2025-12-05",
+  "end": "2025-12-05",
+  "name": "Cloudflare WAF change outage",
+  "operator": "Cloudflare",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Security-mitigation config change (WAF buffer, React CVE response) exposed a latent defect in FL1 proxy (Cloudflare post-mortem)",
+  "cause_status": "Confirmed (vendor post-mortem); not an attack",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://blog.cloudflare.com/5-december-2025-outage/",
+   "https://blog.cloudflare.com/fail-small-resilience-plan/",
+   "https://www.thousandeyes.com/blog/internet-report-cloudflare-venmo-outages"
+  ]
+ },
+ {
+  "id": "T-2025-014",
+  "start": "2025-10-29",
+  "end": "2025-10-30",
+  "name": "Azure Front Door configuration outage",
+  "operator": "Microsoft",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Configuration changes across two control-plane versions produced incompatible metadata that rolled out globally, then an asynchronous data-plane defect caused crashes (29 Oct). Customer-config trigger and manual override describe the separate 9 Oct AFD incident.",
+  "cause_status": "Confirmed (vendor review)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://techcommunity.microsoft.com/blog/azurenetworkingblog/-/4479416",
+   "https://www.parametrixinsurance.com/blog/azure-afd-outage-what-parametrix-monitored-in-real-time",
+   "https://www.thousandeyes.com/blog/microsoft-azure-front-door-outage-analysis-october-29-2025"
+  ]
+ },
+ {
+  "id": "T-2025-015",
+  "start": "2025-07-24",
+  "end": "2025-07-24",
+  "name": "Starlink global network outage",
+  "operator": "SpaceX Starlink",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Failure of key internal software services running the core network (Starlink VP, per Telecoms Tech News); ThousandEyes: centralised control plane failure",
+  "cause_status": "Company statement; independent analysis consistent",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.thousandeyes.com/blog/starlink-outage-analysis-july-24-2025",
+   "https://www.telecomstechnews.com/news/starlink-global-outage-software-failure-2025/",
+   "https://csimagazine.com/csi/starlink-global-outage.php"
+  ]
+ },
+ {
+  "id": "T-2025-017",
+  "start": "2025-05-18",
+  "end": "2025-05-18",
+  "name": "North Macedonia voltage-instability blackout",
+  "operator": "MEPSO",
+  "region": "Europe incl. UK",
+  "subtype": "Power",
+  "cause": "Low consumption and cross-border transit as probable cause of high voltage (MEPSO, per IEA)",
+  "cause_status": "Operator view (IEA)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.iea.org/reports/electricity-2026/reliability"
+  ]
+ },
+ {
+  "id": "T-2025-018",
+  "start": "2025-02-25",
+  "end": "2025-02-26",
+  "name": "Chile national grid separation",
+  "operator": "ISA InterChile (500 kV line/substation operator, subsidiary of ISA)",
+  "region": "Latin America",
+  "subtype": "Power",
+  "cause": "Inadvertent relay operation tripped the 500 kV backbone, cascaded, split grid into two islands (POWER)",
+  "cause_status": "Secondary summary of official findings",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.powermag.com/the-big-picture-infographic-blackouts-in-2025/",
+   "https://en.wikipedia.org/wiki/2025_Chile_blackout",
+   "https://www.wlrn.org/2025-02-26/electricity-returns-to-most-of-chile-after-a-sweeping-blackout-but-questions-remain"
+  ]
+ },
+ {
+  "id": "T-2026-006",
+  "start": "2026-01-24",
+  "end": "2026-01-27",
+  "name": "US winter storm power outages",
+  "operator": "Multiple US utilities; most outages in Tennessee, Mississippi and Louisiana (grid operators not named in sources)",
+  "region": "North America",
+  "subtype": "Physical or environmental",
+  "cause": "Extreme winter weather",
+  "cause_status": "Weather (reported)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.foxbusiness.com/lifestyle/more-than-1-million-americans-lose-power-as-monster-winter-storm-sweeps-across-us",
+   "https://news.bgov.com/environment-and-energy/brutal-cold-puts-us-power-grids-on-edge-in-wake-of-storm"
+  ]
+ },
+ {
+  "id": "T-2026-007",
+  "start": "2026-01-23",
+  "end": "2026-01-27",
+  "name": "Nigeria national grid collapses",
+  "operator": "Nigeria grid operator",
+  "region": "Middle East and Africa",
+  "subtype": "Capacity",
+  "cause": "NISO attributed first collapse to multiple 330kV line trips and unit disconnections; no official cause for the 27 Jan collapse",
+  "cause_status": "Operator data; cause not stated in sources read",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://guardian.ng/news/national-grid-suffers-first-collapse-of-2026-generation-falls-to-zero/",
+   "https://nairametrics.com/2026/01/27/national-grid-collapses-again-plunges-nigeria-into-nationwide-blackout/"
+  ]
+ },
+ {
+  "id": "T-2026-008",
+  "start": "2026-03-16",
+  "end": "2026-08-03",
+  "name": "Cuba national grid collapses (series)",
+  "operator": "Cuba UNE",
+  "region": "Latin America",
+  "subtype": "Capacity",
+  "cause": "Fuel cut-off and obsolete generation; some collapses unexplained, one linked to transmission problem",
+  "cause_status": "Disputed: Havana blames US oil blockade; US State Dept blames Cuban government; Cuba gave no technical cause for 16 Mar collapse",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.aljazeera.com/amp/news/2026/7/14/cubas-power-grid-collapses-again-triggering-third-blackout-in-10-days",
+   "https://www.local10.com/news/world/2026/08/03/cuba-begins-restoring-power-after-sixth-nationwide-electrical-grid-collapse-of-2026/",
+   "https://bdnews24.com/world/257d235f7861"
+  ]
+ },
+ {
+  "id": "T-2026-009",
+  "start": "2026-06-29",
+  "end": "2026-07-06",
+  "name": "ECB T2 payment system outages",
+  "operator": "European Central Bank (T2)",
+  "region": "Europe incl. UK",
+  "subtype": "Change or software defect",
+  "cause": "Glitch linked to a recent software update",
+  "cause_status": "Reported (The Paypers)",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://thepaypers.com/fraud-and-fincrime/news/ecb-payment-system-hit-by-second-outage-in-a-week"
+  ]
+ },
+ {
+  "id": "T-2026-010",
+  "start": "2026-08-15",
+  "end": "2026-08-15",
+  "name": "Mastercard network outage (scheduled update)",
+  "operator": "Mastercard",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Scheduled system update (Mastercard statement); detail not disclosed",
+  "cause_status": "Company said scheduled update; detail unconfirmed",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "direct",
+  "sources": [
+   "https://ia.acs.org.au/article/2026/-system-update--triggers-major-mastercard-outage.html",
+   "https://www.cyberdaily.au/tech/14062-weekend-mastercard-outage-resolved-but-is-customer-trust-at-risk"
+  ]
+ },
+ {
+  "id": "T-2026-011",
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "name": "Microsoft 365 / Copilot outage (upgrade issue)",
+  "operator": "Microsoft",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Technical issue during an upgrade (Gulf News)",
+  "cause_status": "Reported; vendor report not seen",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://gulfnews.com/business/banking/us-bank-outages-why-chase-bank-of-america-and-zelle-payments-were-delayed-1.500749851",
+   "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/16/customers-at-major-banks-report-difficulty-accessing-accounts-online"
+  ]
+ },
+ {
+  "id": "T-2026-012",
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "name": "FAA air traffic control outage",
+  "operator": "FAA",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Communications failure; FAA cited a communication issue impacting all Air Route Traffic Control Centers; no cyber indication",
+  "cause_status": "Unknown",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://www.csmonitor.com/Business/2026/1113/faa-nationwide-ground-stop-airlines"
+  ]
+ },
+ {
+  "id": "T-2026-013",
+  "start": "2026-11-16",
+  "end": "2026-11-16",
+  "name": "JPMorgan Chase and US bank outages",
+  "operator": "JPMorgan Chase",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Software bug in an on-premise hardware system; not cyber-related (Chase spokesperson)",
+  "cause_status": "Company statement",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://aljazeera.com/news/2026/11/17/us-bank-outage-what-caused-chase-problems-and-zelle-payment-delays",
+   "https://thepaypers.com/payments/news/chase-software-bug-disrupts-services-at-several-major-us-banks"
+  ]
+ },
+ {
+  "id": "T-2026-014",
+  "start": "2026-06-23",
+  "end": "2026-06-23",
+  "name": "UK card payment failures (match night)",
+  "operator": "UK card processor (unnamed in source)",
+  "region": "Europe incl. UK",
+  "subtype": "Third-party or provider",
+  "cause": "Power outage at a third-party payment processor disrupted authorisations across platforms it runs",
+  "cause_status": "Unknown",
+  "grade": "D",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://truelayer.com/blog/payments/red-card-how-a-payment-outage-put-england-s-merchants-on-the-sideline/"
+  ]
+ },
+ {
+  "id": "T-2024-001",
+  "start": "2024-07-19",
+  "end": "2024-07-19",
+  "name": "CrowdStrike Falcon content update crash",
+  "operator": "CrowdStrike",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Template Type expected 20 input fields, update supplied 21; validator missed it (CrowdStrike RCA)",
+  "cause_status": "Confirmed (vendor RCA)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.techtarget.com/cybersecurity/news/366596579/CrowdStrike-Content-validation-bug-led-to-global-outage",
+   "https://www.ciodive.com/news/crowdstrike-mismatch-falcon-sensor-outage-microsoft/723623/",
+   "https://www.rnz.co.nz/news/world/524506/crowdstrike-releases-root-cause-analysis-of-global-microsoft-breakdown",
+   "https://www.theregister.com/2024/07/25/crowdstrike_timeline/"
+  ]
+ },
+ {
+  "id": "T-2023-001",
+  "start": "2023-11-08",
+  "end": "2023-11-08",
+  "name": "Optus nationwide outage",
+  "operator": "Optus (Singtel)",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Routine software upgrade; routing information from international peering network cascaded; routers disconnected (Optus); ACMA investigation report published Nov 2024",
+  "cause_status": "Confirmed (operator; regulator report)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.rnz.co.nz/news/world/502322/optus-identifies-cause-of-nationwide-outage-says-changes-to-routing-information-after-software-upgrade-to-blame",
+   "https://www.acma.gov.au/sites/default/files/2024-11/Investigation report - Optus outage 1Nov23 %28redacted%29.pdf",
+   "https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications/OptusNetworkOutage/Report/Chapter_2_-_The_Optus_network_outage"
+  ]
+ },
+ {
+  "id": "T-2024-003",
+  "start": "2024-02-22",
+  "end": "2024-02-22",
+  "name": "AT&T Mobility nationwide outage",
+  "operator": "AT&T",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Network change with equipment configuration error; insufficient controls (FCC report)",
+  "cause_status": "Confirmed (FCC report)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.fierce-network.com/wireless/fcc-reports-atts-nationwide-outage-february",
+   "https://urgentcomm.com/?p=41053",
+   "https://fcc.gov/node/264402"
+  ]
+ },
+ {
+  "id": "T-2023-006",
+  "start": "2023-08-28",
+  "end": "2023-08-28",
+  "name": "NATS flight planning system failure",
+  "operator": "NATS (En Route)",
+  "region": "Europe incl. UK",
+  "subtype": "Change or software defect",
+  "cause": "Flight plan with duplicate waypoint names caused FPRSA-R to fail; primary and backup failed within seconds (CAA independent review, NATS report)",
+  "cause_status": "Confirmed (regulator review)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://www.caa.co.uk/our-work/publications/documents/content/cap2993/",
+   "https://www.caa.co.uk/newsroom/news/aviation-regulator-publishes-independent-review-into-august-2023-nats-flight-planning-system-failure/",
+   "https://www.thestack.technology/legacy-airlines-exposing-the-tech-meltdown-behind-bank-holiday-flight-chaos/"
+  ]
+ },
+ {
+  "id": "T-2023-008",
+  "start": "2023-08-15",
+  "end": "2023-08-15",
+  "name": "Brazil national blackout",
+  "operator": "ONS / Eletrobras (Chesf)",
+  "region": "Latin America",
+  "subtype": "Power",
+  "cause": "Improper protection trip of 500kV Quixadá II–Fortaleza II line; wind and solar plants' voltage control underperformed (ONS final report)",
+  "cause_status": "Confirmed (operator report)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://canalsolar.com.br/en/ons-releases-final-version-of-the-rap-and-concludes-analysis-of-the-erasure-on-August-15th/",
+   "https://bnamericas.com/en/news/eletrobras-identifies-cause-of-blackout",
+   "https://latinnews.com/component/k2/item/98218.html"
+  ]
+ },
+ {
+  "id": "T-2024-009",
+  "start": "2024-02-24",
+  "end": "2024-03-04",
+  "name": "Red Sea submarine cable cuts (AAE-1, EIG, Seacom, TGN)",
+  "operator": "Cable consortia (AAE-1, EIG, Seacom, TGN-Gulf)",
+  "region": "Middle East and Africa",
+  "subtype": "Physical or environmental",
+  "cause": "Cables cut; US officials said the anchor of the Houthi-struck ship Rubymar likely severed three; Houthis denied",
+  "cause_status": "Contested attribution (anchor drag vs sabotage)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://techblog.comsoc.org/tag/red-sea-cable/",
+   "https://www.ttnews.com/articles/red-sea-cables-cut-houthis",
+   "https://www.csis.org/analysis/red-sea-cable-damage-reveals-soft-underbelly-global-economy"
+  ]
+ },
+ {
+  "id": "T-2024-010",
+  "start": "2024-05-12",
+  "end": "2024-06-03",
+  "name": "East Africa SEACOM and EASSy cable failures",
+  "operator": "Seacom; EASSy",
+  "region": "Middle East and Africa",
+  "subtype": "Physical or environmental",
+  "cause": "Both cables damaged off KwaZulu-Natal; likely an undersea event (TechCentral); cause not confirmed in sources read",
+  "cause_status": "Unconfirmed",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.internetsociety.org/resources/doc/2024/2024-east-africa-submarine-cable-outage-report/",
+   "https://blog.cloudflare.com/east-african-internet-connectivity-again-impacted-by-submarine-cable-cuts/",
+   "https://www.semafor.com/article/05/14/2024/east-africa-outages-fears-africas-internet-vulnerabilities"
+  ]
+ },
+ {
+  "id": "T-2023-009",
+  "start": "2023-10-14",
+  "end": "2023-10-15",
+  "name": "DBS and Citibank Singapore outage (Equinix cooling)",
+  "operator": "DBS; Citibank",
+  "region": "APAC ex-ANZ",
+  "subtype": "Physical or environmental",
+  "cause": "Cooling system fault during a planned upgrade (contractor signal shut chilled water valves, per Business Times via FinTech Futures); temperature rose; backup recovery failed within 4 hours",
+  "cause_status": "Confirmed (MAS parliamentary reply, Equinix)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.mas.gov.sg/news/parliamentary-replies/2023/oral-reply-to-parliamentary-question-onbanking-services-disruption-of-dbs-and-citibank",
+   "https://www.theregister.com/2023/11/07/overheating_datacenter_singapore",
+   "https://mothership.sg/2023/11/impact-oct-14-dbs-citibank-outage",
+   "https://fintechfutures.com/?p=15303471"
+  ]
+ },
+ {
+  "id": "T-2023-010",
+  "start": "2023-11-02",
+  "end": "2023-11-04",
+  "name": "Cloudflare control plane outage (Flexential power failure)",
+  "operator": "Cloudflare",
+  "region": "North America",
+  "subtype": "Power",
+  "cause": "Utility power event and generator failures at Flexential Hillsboro; failover dependencies untested (Cloudflare post-mortem)",
+  "cause_status": "Confirmed (vendor post-mortem)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://blog.cloudflare.com/post-mortem-on-cloudflare-control-plane-and-analytics-outage/",
+   "https://www.thousandeyes.com/blog/internet-report-pulse-update-workday-cloudflare-outages",
+   "https://www.datacenterdynamics.com/en/news/cloudflare-suffers-second-power-outage-at-flexential-data-center-in-oregon-in-six-months"
+  ]
+ },
+ {
+  "id": "T-2021-001",
+  "start": "2021-10-04",
+  "end": "2021-10-04",
+  "name": "Facebook, Instagram, WhatsApp global outage",
+  "operator": "Meta",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Faulty configuration change on backbone routers withdrew BGP routes and DNS",
+  "cause_status": "confirmed by operator",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://www.theregister.com/2021/10/04/facebook_back_online/",
+   "https://www.theregister.com/2021/10/06/facebook_outage_explained_in_detail/",
+   "https://www.thousandeyes.com/blog/facebook-outage-analysis"
+  ]
+ },
+ {
+  "id": "T-2021-004",
+  "start": "2021-06-08",
+  "end": "2021-06-08",
+  "name": "Fastly global CDN outage",
+  "operator": "Fastly",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Latent bug from 12 May deployment triggered by valid customer config change; 85% of network returned errors",
+  "cause_status": "confirmed by operator",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.fastly.com/blog/summary-of-june-8-outage",
+   "https://www.theregister.com/2021/06/09/fastly_explains_web_blackout/",
+   "https://www.thousandeyes.com/blog/inside-the-fastly-outage-analysis-and-lessons-learned"
+  ]
+ },
+ {
+  "id": "T-2021-005",
+  "start": "2021-12-07",
+  "end": "2021-12-07",
+  "name": "AWS us-east-1 outage",
+  "operator": "Amazon Web Services",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Automated capacity-scaling activity triggered surge on internal network; congestion also impaired monitoring",
+  "cause_status": "confirmed by operator",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://aws.amazon.com/message/12721",
+   "https://www.theregister.com/2021/12/13/aws_postmortem/",
+   "https://www.thousandeyes.com/blog/internet-report-weekly-pulse-dec-13"
+  ]
+ },
+ {
+  "id": "T-2022-001",
+  "start": "2022-07-08",
+  "end": "2022-07-09",
+  "name": "Rogers national outage",
+  "operator": "Rogers Communications",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Core IP network update deleted routing filter; all routes passed to routers",
+  "cause_status": "confirmed (operator filing, CRTC-commissioned Xona report)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://crtc.gc.ca/eng/archive/2022/lt220712.htm",
+   "https://crtc.gc.ca/eng/publications/reports/xonarp2023.htm",
+   "https://www.cbc.ca/lite/story/1.6530067"
+  ]
+ },
+ {
+  "id": "T-2022-005",
+  "start": "2022-12-21",
+  "end": "2022-12-30",
+  "name": "Southwest Airlines scheduling meltdown",
+  "operator": "Southwest Airlines",
+  "region": "North America",
+  "subtype": "Capacity",
+  "cause": "Winter storm trigger; crew-assignment system overwhelmed by close-in cancellations, manual recovery",
+  "cause_status": "reported (executives and DOT order; operator disputes tech failure)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://wikipedia.com/wiki/2022_Southwest_Airlines_flight_delays",
+   "https://www.travelweekly.com/Travel-News/Airline-News/DOT-investigating-Southwest-Airlines-scheduling",
+   "https://www.cbsnews.com/news/southwest-airlines-federal-investigation-holiday-debacle-stranded-millions/"
+  ]
+ },
+ {
+  "id": "T-2021-008",
+  "start": "2021-02-15",
+  "end": "2021-02-19",
+  "name": "Texas winter storm Uri blackouts",
+  "operator": "ERCOT / Texas utilities",
+  "region": "North America",
+  "subtype": "Physical or environmental",
+  "cause": "Extreme cold caused generation failures while demand surged; ERCOT forced rotating outages",
+  "cause_status": "confirmed (multiple inquiries)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://ebsco.com/research-starters/power-and-energy/2021-texas-power-crisis",
+   "https://www.ksat.com/news/texas/2021/03/29/almost-70-of-ercot-customers-lost-power-during-winter-storm-study-finds/",
+   "https://www.chds.us/c/timeline/2021-texas-power-crisis/"
+  ]
+ },
+ {
+  "id": "T-2022-007",
+  "start": "2022-04-04",
+  "end": "2022-04-18",
+  "name": "Atlassian Cloud deletion incident",
+  "operator": "Atlassian",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Maintenance script run with wrong execution mode and wrong ID list deleted sites for ~400 customers",
+  "cause_status": "confirmed by operator (post-incident review)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://atlassian.com/engineering/post-incident-review-april-2022-outage",
+   "https://www.atlassian.com/engineering/april-2022-outage-update",
+   "https://www.atlassian.com/blog/how-we-build/april-2022-outage-update"
+  ]
+ },
+ {
+  "id": "T-2023-011",
+  "start": "2023-01-10",
+  "end": "2023-01-11",
+  "name": "FAA NOTAM outage and national ground stop",
+  "operator": "FAA",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Contract personnel unintentionally deleted files while fixing sync between primary and backup databases",
+  "cause_status": "confirmed by operator (FAA statement 19 Jan 2023)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.faa.gov/newsroom/faa-notam-statement",
+   "https://www.npr.org/2023/01/11/1148340708/faa-notam-ground-stop-flight-delay",
+   "https://www.flyingmag.com/damaged-database-likely-cause-for-notam-outage-faa-says"
+  ]
+ },
+ {
+  "id": "T-2019-001",
+  "start": "2019-06-02",
+  "end": "2019-06-02",
+  "name": "Google Cloud, G Suite and YouTube network congestion",
+  "operator": "Google",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Configuration change meant for a few servers in one region applied to many servers across neighbouring regions; more than half of network capacity lost",
+  "cause_status": "confirmed by operator (incident report and VP blog)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://status.cloud.google.com/incident/cloud-networking/19009",
+   "https://cloud.google.com/blog/topics/inside-google-cloud/an-update-on-sundays-service-disruption",
+   "https://technologydecisions.com.au/content/information-technology-professionals-association/news/misapplied-config-change-caused-google-service-outage-1024474341"
+  ]
+ },
+ {
+  "id": "T-2019-002",
+  "start": "2019-07-02",
+  "end": "2019-07-02",
+  "name": "Cloudflare global outage (WAF regular expression)",
+  "operator": "Cloudflare",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "New WAF managed rule with a backtracking regular expression exhausted CPU on all HTTP/HTTPS cores worldwide",
+  "cause_status": "confirmed by operator (post-mortem 12 Jul 2019)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019",
+   "https://www.infosecurity-magazine.com/news/cloudflare-network-outage-bad/"
+  ]
+ },
+ {
+  "id": "T-2019-003",
+  "start": "2019-03-13",
+  "end": "2019-03-14",
+  "name": "Facebook, Instagram, WhatsApp outage",
+  "operator": "Facebook",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "'Server configuration change' per operator; no detail published",
+  "cause_status": "operator statement only; no post-mortem",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.engadget.com/2019/03/14/facebook-instagram-outage-server-configuration-change/",
+   "https://www.cityam.com/facebook-blames-server-problem-after-14-hour-outage/",
+   "https://www.theregister.com/2019/03/14/facebook_server_configuration/"
+  ]
+ },
+ {
+  "id": "T-2019-004",
+  "start": "2019-03-07",
+  "end": "2019-03-14",
+  "name": "Venezuela nationwide blackouts",
+  "operator": "Corpoelec (state operator)",
+  "region": "Latin America",
+  "subtype": "Power",
+  "cause": "Failure at Guri plant and transmission; government alleged sabotage or cyber attack; independent commentators cite old equipment, poor maintenance and a vegetation fire near lines",
+  "cause_status": "disputed (government sabotage claim unproven; maintenance failure widely assessed)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://netblocks.org/reports/progress-as-venezuela-restores-power-OxAG5Oyz",
+   "https://www.csis.org/analysis/venezuelas-man-made-power-outage",
+   "https://www.pbs.org/newshour/world/most-of-venezuela-suffers-power-outage"
+  ]
+ },
+ {
+  "id": "T-2020-004",
+  "start": "2020-08-30",
+  "end": "2020-08-30",
+  "name": "CenturyLink/Level 3 backbone outage",
+  "operator": "CenturyLink (Lumen)",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Flowspec announcement destabilised BGP in the backbone (inferred by Cloudflare and Catchpoint from routing data; operator RCA not retrieved)",
+  "cause_status": "Operator status update attributed it to a bad Flowspec rule (per Cloudflare and Catchpoint); formal RCA not read",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://blog.cloudflare.com/analysis-of-todays-centurylink-level-3-outage/",
+   "https://www.catchpoint.com/blog/centurylink-outage-2020",
+   "https://www.theregister.com/2020/08/31/centurylink_outage/"
+  ]
+ },
+ {
+  "id": "T-2020-005",
+  "start": "2020-11-25",
+  "end": "2020-11-25",
+  "name": "AWS Kinesis us-east-1 outage",
+  "operator": "Amazon Web Services",
+  "region": "North America",
+  "subtype": "Capacity",
+  "cause": "Capacity added to Kinesis front-end fleet pushed servers past an OS thread limit; shard-map caches failed; restart of whole fleet required",
+  "cause_status": "confirmed by operator (AWS post-event summary)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://aws.amazon.com/message/11201",
+   "https://datacenterdynamics.com/en/news/aws-explains-what-went-wrong-us-east-1",
+   "https://www.theregister.com/2020/11/25/aws_down/"
+  ]
+ },
+ {
+  "id": "T-2017-001",
+  "start": "2017-02-28",
+  "end": "2017-02-28",
+  "name": "AWS S3 us-east-1 outage",
+  "operator": "Amazon Web Services",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Operator input error in a playbook command removed more S3 servers than intended; restarts of index and placement subsystems took hours",
+  "cause_status": "confirmed by operator (AWS post-event summary)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://aws.amazon.com/message/41926",
+   "https://www.eweek.com/cloud/typo-set-in-motion-chain-of-events-that-shut-down-aws-s3-cloud/"
+  ]
+ },
+ {
+  "id": "T-2017-004",
+  "start": "2017-05-27",
+  "end": "2017-05-29",
+  "name": "British Airways global IT failure",
+  "operator": "British Airways",
+  "region": "Europe incl. UK",
+  "subtype": "Power",
+  "cause": "Loss of power at a UK data centre compounded by uncontrolled return of power; surge damaged infrastructure; human error reported",
+  "cause_status": "operator account; investigation findings not fully retrieved",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.theregister.co.uk/2017/05/27/ba_it_systems_failure_down_to_power_failure/",
+   "https://www.itpro.co.uk/strategy/28728/a-power-surge-caused-british-airways-it-outage",
+   "https://www.pcworld.com/article/3198854/power-surge-at-british-airways-data-center-causes-flight-chaos.html"
+  ]
+ },
+ {
+  "id": "T-2018-001",
+  "start": "2018-04-20",
+  "end": "2018-05",
+  "name": "TSB core banking migration failure",
+  "operator": "TSB",
+  "region": "Europe incl. UK",
+  "subtype": "Change or software defect",
+  "cause": "Big-bang migration of five million customers to a platform that was not stable or complete; inadequate testing. Board review: two data centres configured inconsistently",
+  "cause_status": "independent report (Slaughter and May, commissioned by TSB); board disputes parts",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.tsb.co.uk/news-releases/slaughter-and-may/",
+   "https://www.computerweekly.com/news/252474170/TSB-programme-pulled-apart-in-report-on-IT-meltdown",
+   "https://www.pressreader.com/uk/scottish-daily-mail/20191120/281925954851061",
+   "https://www.itpro.com/business-strategy/it-infrastructure/369753/tsb-bank-fined-48-million-over-botched-it-upgrade",
+   "https://www.theregister.com/on-prem/2019/02/01/terribly-sorry-bank-reports-165-drop-in-profits-to-a-pre-tax-loss-of-1054m/383751"
+  ]
+ },
+ {
+  "id": "T-2018-002",
+  "start": "2018-06-01",
+  "end": "2018-06-02",
+  "name": "Visa Europe card payment outage",
+  "operator": "Visa Europe",
+  "region": "Europe incl. UK",
+  "subtype": "Physical or environmental",
+  "cause": "Rare partial failure of a switch in one of Visa's two data centres; failover delayed",
+  "cause_status": "confirmed by operator (letter to UK Treasury Committee, via press)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.computerweekly.com/news/252443325/Visa-reveals-rare-datacentre-switch-fault-as-root-cause-of-June-2018-outage",
+   "https://phys.org/news/2018-06-visa-million-payments-affected-june.pdf",
+   "https://itbrief.com.au/story/visas-cockup-put-down-very-rare-data-centre-crash"
+  ]
+ },
+ {
+  "id": "T-2020-009",
+  "start": "2020-12-14",
+  "end": "2020-12-14",
+  "name": "Google authentication / User ID service outage",
+  "operator": "Google",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Quota reduction on User ID storage after grace period; no alert fired",
+  "cause_status": "confirmed (Google status incident)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://status.cloud.google.com/incident/zall/20013",
+   "https://www.cbsnews.com/amp/news/google-services-restored-global-outage-today-2020-12-14"
+  ]
+ },
+ {
+  "id": "T-2020-010",
+  "start": "2020-09-28",
+  "end": "2020-09-29",
+  "name": "Azure AD authentication outage (Sep 2020)",
+  "operator": "Microsoft",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Latent code defect in Safe Deployment Process caused update to deploy straight to production",
+  "cause_status": "confirmed (Microsoft RCA, secondary relay)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://mspoweruser.com/microsoft-posts-root-cause-analysis-for-this-weeks-microsoft-365-login-issues",
+   "https://itwire.com/business-it-news/security/microsoft-says-software-bug-in-azure-ad-caused-recent-outage",
+   "https://www.theregister.com/2020/10/02/microsoft_azure_bug/"
+  ]
+ },
+ {
+  "id": "T-2020-011",
+  "start": "2020-12-25",
+  "end": "2020-12-28",
+  "name": "Nashville AT&T central office bombing",
+  "operator": "AT&T",
+  "region": "North America",
+  "subtype": "Physical or environmental",
+  "cause": "Deliberate explosion damaged power and flooded backup generators",
+  "cause_status": "confirmed (police, AT&T)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.datacenterfrontier.com/featured/article/11428484/nashville-explosion-at038t-repairs-damage-to-its-building-and-network",
+   "https://www.news4jax.com/business/2020/12/30/nashville-bombing-spotlights-vulnerable-voice-data-networks/",
+   "https://whyy.org/articles/nashville-bombing-spotlights-vulnerable-voice-data-networks/"
+  ]
+ },
+ {
+  "id": "T-2021-010",
+  "start": "2021-03-15",
+  "end": "2021-03-16",
+  "name": "Azure AD authentication outage (Mar 2021)",
+  "operator": "Microsoft",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Key rotation: automation ignored 'retain' state and removed signing key",
+  "cause_status": "confirmed (Microsoft preliminary RCA)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://learn.microsoft.com/en-us/answers/questions/315440/notification-authentication-errors-across-multiple",
+   "https://rcpmag.com/articles/2021/03/16/what-happened-azure-ad-outage.aspx"
+  ]
+ },
+ {
+  "id": "T-2020-008",
+  "start": "2020-07-17",
+  "end": "2020-07-17",
+  "name": "Cloudflare backbone configuration error",
+  "operator": "Cloudflare",
+  "region": "Global or multi-region",
+  "subtype": "Change or software defect",
+  "cause": "Router configuration change in Atlanta leaked BGP routes into backbone",
+  "cause_status": "confirmed (operator post-mortem)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "unverified",
+  "sources": [
+   "https://blog.cloudflare.com/cloudflare-outage-on-july-17-2020/",
+   "https://www.computerweekly.com/news/252486372/Cloudflare-apologises-for-major-net-outage"
+  ]
+ },
+ {
+  "id": "T-2016-004",
+  "start": "2016-09-28",
+  "end": "2016-10-11",
+  "name": "South Australia statewide blackout",
+  "operator": "ElectraNet / AEMO (NEM)",
+  "region": "ANZ",
+  "subtype": "Power",
+  "cause": "Storm (tornadoes) downed transmission lines; wind farm protection settings then tripped, losing Heywood interconnector and system collapsed",
+  "cause_status": "confirmed (AEMO final report, AER)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.aemo.com.au/-/media/Files/Electricity/NEM/Market_Notices_and_Events/Power_System_Incident_Reports/2017/Integrated-Final-Report-SA-Black-System-28-September-2016.pd",
+   "https://www.powermag.com/?p=104067",
+   "https://www.sbs.com.au/news/article/sas-blackout-last-word-on-what-happened/mmgbt59ld",
+   "https://www.aer.gov.au/system/files/Fact%20sheet%20-%20Black%20System%20Event%20Compliance%20Report%20-%20Investigation%20into%20the%20pre-event%20system%20restoration%20and%20market%20suspension%20aspects%20surrounding%20the%2028%20September%202016.pdf"
+  ]
+ },
+ {
+  "id": "T-2016-007",
+  "start": "2016-08-08",
+  "end": "2016-08-10",
+  "name": "Delta Air Lines Atlanta data centre power failure",
+  "operator": "Delta Air Lines",
+  "region": "North America",
+  "subtype": "Power",
+  "cause": "Switchgear / UPS switch fault at Atlanta facility; some servers not on backup power",
+  "cause_status": "disputed (Delta says power loss; Georgia Power says Delta equipment, no area outage)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://datacenterknowledge.com/outages/delta-data-center-outage-grounds-hundreds-of-flights",
+   "https://www.ajc.com/business/delta-outage-price-tag-100-million/2gewyWrTw0t7JObiAhcV3N",
+   "https://fortune.com/2016/09/02/heres-how-much-delta-lost-on-its-massive-flight-outage/",
+   "https://www.dallasnews.com/business/airlines/2016/08/09/deltas-day-2-toll-250-flight-cancellations"
+  ]
+ },
+ {
+  "id": "T-2018-005",
+  "start": "2018-12-27",
+  "end": "2018-12-29",
+  "name": "CenturyLink nationwide fibre network outage (Dec 2018)",
+  "operator": "CenturyLink (Lumen)",
+  "region": "North America",
+  "subtype": "Physical or environmental",
+  "cause": "Faulty network management card in Denver generated four malformed packets propagated to all nodes; lost visibility prolonged recovery",
+  "cause_status": "confirmed (FCC report, Aug 2019)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.fcc.gov/document/fcc-report-centurylink-network-outage",
+   "https://www.theregister.com/2019/08/20/centurylink_outage_report_fcc/",
+   "https://telecomtv.com/content/policy-and-regulation/fcc-issues-report-on-centurylink-network-outage-36076"
+  ]
+ },
+ {
+  "id": "T-2018-007",
+  "start": "2018-05-21",
+  "end": "2018-05-21",
+  "name": "Telstra national mobile outage (21 May 2018)",
+  "operator": "Telstra",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Telstra attributed it to a 4G software fault that pushed customers to 3G, which overloaded; a failsafe also failed",
+  "cause_status": "confirmed (company statement) but early reports said hardware",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.techradar.com/news/telstra-will-compensate-users-on-a-case-by-case-basis-for-yesterdays-big-outage",
+   "https://www.itnews.com.au/news/telstras-4g-network-goes-down-again-491360",
+   "https://www.thenewdaily.com.au/news/national/2018/05/21/telstra-mobile-crash",
+   "https://www.inkl.com/news/telstra-shares-slide-to-seven-year-low-on-second-big-outage-in-a-month"
+  ]
+ },
+ {
+  "id": "T-2018-008",
+  "start": "2018-07-18",
+  "end": "2018-07-18",
+  "name": "British Airways and others, Amadeus Altea outage (Heathrow)",
+  "operator": "Amadeus (supplier); British Airways and other airlines",
+  "region": "Europe incl. UK",
+  "subtype": "Third-party or provider",
+  "cause": "Amadeus blamed a recent configuration implementation load to its network environment; load sheet generation blocked",
+  "cause_status": "partly confirmed (supplier confirmed outage, root cause not read)",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.theregister.com/2018/07/19/amadeus_british_airways_outage_load_sheet/",
+   "https://www.computerweekly.com/news/252445177/Heathrow-flights-grounded-by-IT-failure",
+   "https://uk.finance.yahoo.com/news/british-airways-says-t-issue-065613133.html"
+  ]
+ },
+ {
+  "id": "T-2019-008",
+  "start": "2019-08-07",
+  "end": "2019-08-07",
+  "name": "British Airways check-in and departure systems disruption (Aug 2019)",
+  "operator": "British Airways",
+  "region": "Europe incl. UK",
+  "subtype": "Unclassified",
+  "cause": "Two separate systems affected: online check-in and flight departures; cause not given in the source read",
+  "cause_status": "Not disclosed (re-checked 22 Nov 2026)",
+  "grade": "D",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.theregister.com/2019/08/07/it_issues_causing_delay_for_british_airways_passengers_again/"
+  ]
+ },
+ {
+  "id": "T-2018-009",
+  "start": "2018-12-19",
+  "end": "2018-12-21",
+  "name": "Gatwick Airport drone closure",
+  "operator": "London Gatwick Airport",
+  "region": "Europe incl. UK",
+  "subtype": "Physical or environmental",
+  "cause": "Repeated drone sightings near the runway led to closure; operator never identified",
+  "cause_status": "confirmed (event); perpetrator unresolved (a couple arrested in error and released)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Gatwick_Airport_drone_incident",
+   "https://www.euronews.com/2018/12/21/london-s-gatwick-airport-continues-be-thrown-chaos-drones-n950976",
+   "https://flightsafety.org/gatwick-reopens-after-drone-siege/",
+   "https://news.yahoo.com/five-years-gatwick-drone-disruption-155754124.html"
+  ]
+ },
+ {
+  "id": "T-2016-008",
+  "start": "2016-02-09",
+  "end": "2016-02-09",
+  "name": "Telstra national mobile outage (9 Feb 2016)",
+  "operator": "Telstra",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Telstra attributed it to an 'embarrassing human error'",
+  "cause_status": "partly confirmed (company statement; detail not read)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://au.news.yahoo.com/telstra-mobile-network-down-across-020206000.html",
+   "https://www.itnews.com.au/news/embarrassing-human-error-behind-national-telstra-outage-414836",
+   "https://eftm.com/?p=26321"
+  ]
+ },
+ {
+  "id": "T-2016-009",
+  "start": "2016-03-17",
+  "end": "2016-03-17",
+  "name": "Telstra national mobile outage (17 Mar 2016)",
+  "operator": "Telstra",
+  "region": "ANZ",
+  "subtype": "Capacity",
+  "cause": "Offshore connection issue affecting international roaming customers flowed on to local customers; waves of reconnections overwhelmed the network",
+  "cause_status": "confirmed (company statement via press)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.theregister.com/2016/03/17/telstra_outage/",
+   "https://eftm.com/2016/03/another-national-telstra-mobile-outage-whats-going-on-26321"
+  ]
+ },
+ {
+  "id": "T-2016-010",
+  "start": "2016-09-25",
+  "end": "2016-09-25",
+  "name": "Vodafone Australia national mobile outage (25 Sep 2016)",
+  "operator": "Vodafone Australia",
+  "region": "ANZ",
+  "subtype": "Hardware fault",
+  "cause": "Router issue (operator wording); 4G unavailable, 2G/3G congested",
+  "cause_status": "Operator-stated, no detail",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://gizmodo.com.au/?p=995205",
+   "https://www.theregister.com/2016/09/26/vodafail_is_back_with_seven_hours_of_try_again_later/",
+   "https://www.vodafone.com.au/news/archive/disruption-to-mobile-services"
+  ]
+ },
+ {
+  "id": "T-2017-008",
+  "start": "2017-04-20",
+  "end": "2017-04-20",
+  "name": "Amadeus Altea outage, Lufthansa and Air France boarding (Apr 2017)",
+  "operator": "Lufthansa; Air France",
+  "region": "Europe incl. UK",
+  "subtype": "Third-party or provider",
+  "cause": "Amadeus confirmed technical issues in its Altea system; Air France attributed the problem to Amadeus",
+  "cause_status": "confirmed (supplier and airline statements via press)",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "none",
+  "sources": [
+   "https://s.thepeninsula.qa/article/20/04/2017/Lufthansa,-Air-France-departures-briefly-hit-by-computer-outage",
+   "https://travolution.com/articles/102489/amadeus-systems-issue-delays-boarding-for-lufthansa-and-air-france",
+   "https://www.aerotelegraph.com/lufthansa-systeme-voruebergehend-gestoert"
+  ]
+ },
+ {
+  "id": "T-2017-012",
+  "start": "2017-09-28",
+  "end": "2017-09-28",
+  "name": "Amadeus Altea global check-in outage (Sep 2017)",
+  "operator": "125 airlines including Qantas, Lufthansa, Air France, Southwest",
+  "region": "Global or multi-region",
+  "subtype": "Third-party or provider",
+  "cause": "Amadeus said a faulty switch during network maintenance triggered the failure of Altea",
+  "cause_status": "partly confirmed (supplier confirmed recovery; root cause beyond 'network failure' not read)",
+  "grade": "C",
+  "tier": "extended",
+  "au_exposure": "indirect",
+  "sources": [
+   "https://www.theregister.com/2017/09/28/amadeus_booking_software_outages_lead_to_global_delayed_flights/",
+   "https://www.npr.org/sections/thetwo-way/2017/09/28/554193833/software-glitch-causes-brief-delays-at-airports-worldwide",
+   "https://news.klm.com/network-failure-in-amadeus-computer-system/",
+   "https://www.newshub.co.nz/home/world/2017/09/check-in-system-crash-leads-to-worldwide-chaos.html"
+  ]
+ },
+ {
+  "id": "T-2017-009",
+  "start": "2017-02-02",
+  "end": "2017-02-02",
+  "name": "Telstra Chatswood exchange fire",
+  "operator": "Telstra",
+  "region": "ANZ",
+  "subtype": "Physical or environmental",
+  "cause": "Fire at the Chatswood exchange affected mobile and fixed services",
+  "cause_status": "confirmed (Telstra statement via press)",
+  "grade": "D",
+  "tier": "extended",
+  "au_exposure": "direct",
+  "sources": [
+   "https://techradar.com/news/fire-at-a-sydney-exchange-causes-nationwide-telstra-outage"
+  ]
+ },
+ {
+  "id": "T-2017-010",
+  "start": "2017-09-20",
+  "end": "2018-08-14",
+  "name": "Hurricane Maria and Puerto Rico grid collapse",
+  "operator": "Puerto Rico Electric Power Authority (PREPA)",
+  "region": "North America",
+  "subtype": "Physical or environmental",
+  "cause": "Category 4 hurricane landfall 20 Sep 2017 following Hurricane Irma on 6 Sep; grid effectively destroyed; PREPA was insolvent and had cancelled vegetation management before the storms",
+  "cause_status": "confirmed (EIA, GAO, utility statements)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.eia.gov/TodayinEnergy/detail.php?id=33452",
+   "https://gao.gov/assets/700/699237.pdf",
+   "https://fortune.com/2018/08/15/puerto-rico-hurricane-maria-power-restored/",
+   "https://www.asisonline.org/security-management-magazine/articles/2019/07/bringing-back-power-to-puerto-rico/"
+  ]
+ },
+ {
+  "id": "T-2019-010",
+  "start": "2019-05-22",
+  "end": "2019-05-23",
+  "name": "Optus major network outage (22 to 23 May 2019)",
+  "operator": "Optus",
+  "region": "ANZ",
+  "subtype": "Unclassified",
+  "cause": "Optus confirmed a 'major network outage' affecting international websites and gaming platforms; cause not disclosed",
+  "cause_status": "Not disclosed (re-checked 22 Nov 2026)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.optus.com.au/about/media-centre/media-releases/2019/05/major-network-outage-22-and-23-may-2019",
+   "https://www2.computerworld.com.au/article/print/662008/optus-access-remains-stable-following-major-outage/",
+   "https://www.techpartner.news/news/optus-addresses-major-outage-525669"
+  ]
+ },
+ {
+  "id": "T-2019-011",
+  "start": "2019-08-09",
+  "end": "2019-08-09",
+  "name": "Great Britain power disruption (9 Aug 2019)",
+  "operator": "National Grid ESO; Hornsea One (Orsted); Little Barford (RWE); UK Power Networks",
+  "region": "Europe incl. UK",
+  "subtype": "Power",
+  "cause": "Lightning strike on a transmission line; Hornsea windfarm and Little Barford gas station both tripped almost simultaneously, losing 1,378MW and exceeding the reserve held; protection disconnected about 5% of demand",
+  "cause_status": "confirmed (National Grid ESO technical report; Ofgem investigation)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.ofgem.gov.uk/sites/default/files/docs/eso_technical_report_-_final.pdf",
+   "https://www.ofgem.gov.uk/system/files/docs/2020/07/national_grid_eso_report_lfdd_9_aug_2019.pdf",
+   "https://www.yorkshirepost.co.uk/business/three-firms-are-fined-over-power-cuts-that-caused-travel-chaos-1354265",
+   "https://www.cityam.com/?p=1239162"
+  ]
+ },
+ {
+  "id": "T-2019-012",
+  "start": "2019-06-16",
+  "end": "2019-06-16",
+  "name": "Argentina, Uruguay and Paraguay blackout (16 Jun 2019)",
+  "operator": "Argentine Interconnection System operators; Edesur; Uruguay UTE",
+  "region": "Latin America",
+  "subtype": "Power",
+  "cause": "Operational error: a Transener 500kV line was down for repairs and a bypass was used without updating the Automatic Generation Shutdown system, causing a cascade failure in about 30 seconds",
+  "cause_status": "unresolved in sources read (Wikipedia summary cites operative error)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://en.wikipedia.org/wiki/2019_Argentina,_Paraguay_and_Uruguay_blackout",
+   "https://www.aljazeera.com/amp/news/2019/6/16/massive-power-blackout-hits-argentina-uruguay",
+   "https://watchers.news/2019/06/17/power-outage-argentina-uruguay-june-16-2019/",
+   "https://www.thequint.com/news/world/argentina-uruguay-restore-power-after-massive-blackout"
+  ]
+ },
+ {
+  "id": "T-2022-010",
+  "start": "2022-10-12",
+  "end": "2022-10-13",
+  "name": "RBA clearing service outage, NPP and Osko instant payments (Oct 2022)",
+  "operator": "Reserve Bank of Australia (NPP settlement service); ANZ, CBA, Westpac, NAB and others",
+  "region": "ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Operational error in planned change applied incorrect setting to virtual server software (RBA final report)",
+  "cause_status": "Confirmed (RBA final incident report)",
+  "grade": "A",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.itnews.com.au/news/rba-crash-takes-down-instant-payments-nationwide-586411",
+   "https://thenewdaily.com.au/finance/2022/10/13/rba-osko-outage-medibank/",
+   "https://vixio.com/insights/pc-update-first-lessons-learned-massive-australian-payment-outage",
+   "https://gizmodo.com.au/?p=1825875",
+   "https://www.rba.gov.au/media-releases/2022/pdf/mr-22-40-final-incident-report-rits-and-fss-incident-12-october-2022.pdf"
+  ]
+ },
+ {
+  "id": "T-2023-012",
+  "start": "2023-06-26",
+  "end": "2023-06-26",
+  "name": "Commonwealth Bank nationwide outage (26 Jun 2023)",
+  "operator": "Commonwealth Bank of Australia",
+  "region": "ANZ",
+  "subtype": "Unclassified",
+  "cause": "Cause not stated in the source read",
+  "cause_status": "Not disclosed (re-checked 22 Nov 2026)",
+  "grade": "D",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.thenewdaily.com.au/finance/consumer/2023/06/26/outage-commonwealth-bank"
+  ]
+ },
+ {
+  "id": "T-2024-014",
+  "start": "2024-03-12",
+  "end": "2024-03-13",
+  "name": "Commonwealth Bank overnight outage (12 Mar 2024)",
+  "operator": "Commonwealth Bank of Australia",
+  "region": "ANZ",
+  "subtype": "Unclassified",
+  "cause": "Cause not stated in the source read",
+  "cause_status": "Not disclosed (re-checked 22 Nov 2026)",
+  "grade": "D",
+  "tier": "extended",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.sheppnews.com.au/?p=198402",
+   "https://www.sheppnews.com.au/?p=198362"
+  ]
+ },
+ {
+  "id": "T-2020-013",
+  "start": "2020-10-01",
+  "end": "2020-10-01",
+  "name": "Tokyo Stock Exchange arrowhead failure (1 Oct 2020)",
+  "operator": "Tokyo Stock Exchange (Japan Exchange Group)",
+  "region": "APAC ex-ANZ",
+  "subtype": "Hardware fault",
+  "cause": "Hardware malfunction in the shared disk device (memory card) and automatic switchover to the backup did not work; investigation report published 30 Nov 2020",
+  "cause_status": "confirmed (JPX investigation report, excerpted)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.jpx.co.jp/english/corporate/news/news-releases/0020/b5b4pj000003xrsa-att/InvestigationReport.pdf",
+   "https://www.datacenterknowledge.com/uptime/how-one-piece-of-hardware-took-down-a-6-trillion-stock-market",
+   "https://www.dailysabah.com/business/economy/worst-ever-outage-paralyzes-tokyo-stock-exchange-worlds-3rd-largest"
+  ]
+ },
+ {
+  "id": "T-2021-012",
+  "start": "2021-02-24",
+  "end": "2021-02-24",
+  "name": "National Stock Exchange of India outage (24 Feb 2021)",
+  "operator": "National Stock Exchange of India",
+  "region": "APAC ex-ANZ",
+  "subtype": "Change or software defect",
+  "cause": "NSE attributed it to failover logic for a storage system, implemented by a vendor, that did not conform to the exchange's design; telecom links were initially blamed",
+  "cause_status": "partly confirmed (NSE statement; initial attribution to telecom providers later revised)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.datacenterknowledge.com/outages/top-india-bourse-blames-dug-up-roads-storage-for-longest-outage",
+   "https://datacenterdynamics.com/en/news/indian-national-stock-exchange-suffers-outage-blames-two-telecom-service-providers",
+   "https://www.businesstoday.in/current/economy-politics/nse-trading-suspension-mumbai-blackout-glitches-make-worrying-trend/story/432760.html"
+  ]
+ },
+ {
+  "id": "T-2026-019",
+  "start": "2026-01-14",
+  "end": "2026-01-15",
+  "name": "Verizon nationwide mobile outage (14 Jan 2026)",
+  "operator": "Verizon",
+  "region": "North America",
+  "subtype": "Change or software defect",
+  "cause": "Verizon confirmed a 'software issue' and ruled out a bad actor; full review announced, details not published in sources read",
+  "cause_status": "partly confirmed (company statement; no root-cause detail)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.nhpr.org/2026-01-15/verizon-just-had-a-big-outage-heres-what-we-know",
+   "https://www.yahoo.com/news/articles/now-know-caused-verizon-outage-215500537.html",
+   "https://www.aol.com/articles/verizon-outage-why-phone-says-010340367.html"
+  ]
+ },
+ {
+  "id": "T-2022-011",
+  "start": "2022-07-02",
+  "end": "2022-07-04",
+  "name": "KDDI nationwide mobile outage (2 Jul 2022)",
+  "operator": "KDDI; Okinawa Cellular",
+  "region": "APAC ex-ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Router incorrectly configured during maintenance of nationwide transmission equipment; a flood of location registration signals congested VoLTE nodes and the subscriber database",
+  "cause_status": "confirmed (KDDI report; MIC serious accident report received 28 Jul 2022)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://kddi.com/english/important-news/20220729_01",
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2022/7/28_02.html",
+   "https://www.lightreading.com/business-management/kddi-network-goes-down-for-two-days-after-maintenance-failure",
+   "https://techxplore.com/news/2022-07-outages-disrupt-japan-telecoms-carrier.html"
+  ]
+ },
+ {
+  "id": "T-2021-013",
+  "start": "2021-10-14",
+  "end": "2021-10-15",
+  "name": "NTT Docomo nationwide mobile outage (14 Oct 2021)",
+  "operator": "NTT Docomo",
+  "region": "APAC ex-ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Switch of the IoT location-information server to new equipment failed (software specification gap); the rollback was mishandled and triggered a flood of location registration signals from IoT devices that exhausted signalling exchange resources shared with phones",
+  "cause_status": "confirmed (MIC serious accident report summaries; Docomo briefing as reported by Mynavi)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.soumu.go.jp/main_content/000777459.pdf",
+   "https://www.soumu.go.jp/main_content/000779906.pdf",
+   "https://news.mynavi.jp/article/20211110-2182987/",
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2021/11/26_03.html"
+  ]
+ },
+ {
+  "id": "T-2025-019",
+  "start": "2025-09-26",
+  "end": null,
+  "name": "South Korea NIRS data centre fire (26 Sep 2025)",
+  "operator": "National Information Resources Service (NIRS), Daejeon",
+  "region": "APAC ex-ANZ",
+  "subtype": "Physical or environmental",
+  "cause": "Lithium-ion battery fire in the uninterruptible power supply room, suspected to have started during battery maintenance",
+  "cause_status": "partly confirmed (government briefings via press; investigation by fire agency and forensic service)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.bestmag.co.uk/south-korea-data-centre-fire-halts-647-government-services/",
+   "https://www.dawn.com/news/1944960/south-korea-scrambles-to-restore-services-after-major-state-data-centre-fire",
+   "https://www.koreatimes.co.kr/amp/southkorea/society/20251031/recovery-of-govt-services-nears-90-after-data-center-fire",
+   "https://asianews.network/?p=229753"
+  ]
+ },
+ {
+  "id": "T-2024-016",
+  "start": "2024-04",
+  "end": "2024-12-20",
+  "name": "Ecuador drought-driven rolling blackouts (2024)",
+  "operator": "Government of Ecuador (national grid)",
+  "region": "Latin America",
+  "subtype": "Capacity",
+  "cause": "about 70 percent of generation/demand",
+  "cause_status": "confirmed (energy ministry statements via press); investigations of responsibility ongoing",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://en.wikipedia.org/wiki/2024_Ecuadorian_blackouts",
+   "https://www.aljazeera.com/features/longform/2024/12/19/in-the-dark-how-rolling-blackouts-have-transformed-life-in-ecuador",
+   "https://www.rnz.co.nz/news/top/531977/ecuador-extends-drought-induced-power-cuts-to-14-hours-a-day",
+   "https://business.inquirer.net/481767/ecuador-to-begin-drought-driven-power-cuts-early"
+  ]
+ },
+ {
+  "id": "T-2025-020",
+  "start": "2025-09-26",
+  "end": "2025-09-26",
+  "name": "Yucatan Peninsula blackout (26 Sep 2025)",
+  "operator": "CFE; CENACE",
+  "region": "Latin America",
+  "subtype": "Power",
+  "cause": "CFE reported trips on 230 kV and 400 kV transmission lines; the Energy Secretary said it occurred during maintenance work",
+  "cause_status": "partly confirmed (CFE operating detail via press; formal probe announced)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.infobae.com/mexico/2025/09/27/apagon-masivo-en-peninsula-de-yucatan-cuales-fueron-las-causas/",
+   "https://particlenews.pages.dev/story/power-restored-after-yucatn-peninsula-blackout-tied-to-transmission-failure",
+   "https://politica.expansion.mx/estados/2025/09/26/se-restablece-energia-en-peninsula-de-yucatan-mega-apagon-afecto-a-2-millones",
+   "https://thesun.my/world-news/power-restored-in-southeast-mexico-after-blackout-affects-23-million-NE14981941"
+  ]
+ },
+ {
+  "id": "T-2023-018",
+  "start": "2023-02-20",
+  "end": null,
+  "name": "Eskom stage 6 load shedding, South Africa (Feb 2023)",
+  "operator": "Eskom",
+  "region": "Middle East and Africa",
+  "subtype": "Capacity",
+  "cause": "Breakdowns at Arnot, Hendrina, Lethabo, Majuba and Camden power stations took more than half of capacity offline; Eskom said total grid collapse was an improbable scenario",
+  "cause_status": "confirmed (Eskom briefings via press)",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.timeslive.co.za/news/south-africa/2023-02-20-eskom-does-not-expect-load-shedding-to-reach-stage-8-says-de-ruyter/",
+   "https://mg.co.za/?p=540831",
+   "https://www.aljazeera.com/amp/news/2023/5/18/eskom-warns-south-africa-to-brace-for-longer-power-cuts",
+   "https://businesstech.co.za/news/energy/626814/a-total-blackout-would-leave-south-africa-in-the-dark-for-weeks-eskom/"
+  ]
+ },
+ {
+  "id": "T-2016-012",
+  "start": "2016-03-13",
+  "end": "2016-03-13",
+  "name": "Sri Lanka nationwide blackout (Mar 2016)",
+  "operator": "Ceylon Electricity Board",
+  "region": "APAC ex-ANZ",
+  "subtype": "Power",
+  "cause": "Explosion and fire at a main distribution centre outside Colombo tripped the grid; minister said sabotage not ruled out",
+  "cause_status": "unconfirmed",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://tribune.com.pk/story/1066129/entertainment",
+   "https://en.wikipedia.org/wiki/Power_outages_in_Sri_Lanka"
+  ]
+ },
+ {
+  "id": "T-2020-015",
+  "start": "2020-08-17",
+  "end": "2020-08-17",
+  "name": "Sri Lanka nationwide blackout (Aug 2020)",
+  "operator": "Ceylon Electricity Board",
+  "region": "APAC ex-ANZ",
+  "subtype": "Power",
+  "cause": "Transmission technical failure at Kerawalapitiya grid substation; cascading failure",
+  "cause_status": "preliminary (technical failure); committee appointed",
+  "grade": "C",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://en.wikipedia.org/wiki/2020_Sri_Lankan_blackouts",
+   "https://www.gulftoday.ae/News/2020/08/17/Sri-Lanka-plunged-into-darkness-after-power-outage-hits-entire-nation",
+   "https://www.lokmattimes.com/international/sl-faces-nationwide-blackout-due-to-technical-failure/amp/"
+  ]
+ },
+ {
+  "id": "T-2022-015",
+  "start": "2022-12-17",
+  "end": "2022-12-20",
+  "name": "NTT Docomo mobile data outages (17 and 20 Dec 2022)",
+  "operator": "NTT Docomo",
+  "region": "APAC ex-ANZ",
+  "subtype": "Hardware fault",
+  "cause": "17 Dec hardware fault, failover failed; 20 Dec change error (manual omitted step). Mixed row.",
+  "cause_status": "Confirmed (Docomo reports to MIC)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2023/2/13_01.html",
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2023/1/16_05.html",
+   "https://www.docomo.ne.jp/binary/pdf/info/news_release/2023/01/16_00.pdf",
+   "https://www.docomo.ne.jp/binary/pdf/info/news_release/2023/01/16_01.pdf"
+  ]
+ },
+ {
+  "id": "T-2022-016",
+  "start": "2022-09-04",
+  "end": null,
+  "name": "Rakuten Mobile large-scale failure (4 Sep 2022)",
+  "operator": "Rakuten Mobile",
+  "region": "APAC ex-ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Software defect exhausted log memory in data-centre switches; emergency-mode procedure inadequate",
+  "cause_status": "Confirmed (Rakuten notice)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2022/12/09_01.html",
+   "https://network.mobile.rakuten.co.jp/information/news/other/2136/"
+  ]
+ },
+ {
+  "id": "T-2023-024",
+  "start": "2023-04-03",
+  "end": "2023-04-03",
+  "name": "NTT East and NTT West FLET'S Hikari and Hikari Denwa failure (3 Apr 2023)",
+  "operator": "NTT East; NTT West",
+  "region": "APAC ex-ANZ",
+  "subtype": "Change or software defect",
+  "cause": "Software glitch in subscriber-line equipment; 116 units of the same foreign-made device (press)",
+  "cause_status": "Reported (MIC reports and press)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2023/5/24_2.html",
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2023/4/28_5.html",
+   "https://sp.m.jiji.com/english/show/26456",
+   "https://datacenterdynamics.com/en/news/ntt-hit-by-network-outage-in-japan-with-telecom-services-impacted"
+  ]
+ },
+ {
+  "id": "T-2023-027",
+  "start": "2023-11-18",
+  "end": "2023-11-20",
+  "name": "SoftBank fixed telephone failures (18 to 20 Nov 2023)",
+  "operator": "SoftBank Corp.",
+  "region": "APAC ex-ANZ",
+  "subtype": "Hardware fault",
+  "cause": "Primary: subscriber database hardware fault; untested switchover exposed software defect; wrong part replaced. Mixed row.",
+  "cause_status": "Confirmed (SoftBank report summary)",
+  "grade": "B",
+  "tier": "core",
+  "au_exposure": "none",
+  "sources": [
+   "https://www.soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2023/12/27_5.html",
+   "https://www.softbank.jp/corp/news/press/sbkk/2023/20231227_01"
+  ]
+ },
+ {
+  "id": "T-2026-023",
+  "start": "2026-01-27",
+  "end": "2026-01-27",
+  "name": "RBA RITS file-transfer and low-value settlement outage (Jan 2026, expired certificate)",
+  "operator": "Reserve Bank of Australia",
+  "region": "ANZ",
+  "subtype": "Process or lifecycle failure",
+  "cause": "Expired intermediate certificate on the database platform behind RITS applications; a replacement issued 17 May 2025 was never installed (RBA incident report)",
+  "cause_status": "Confirmed (RBA incident report)",
+  "grade": "A",
+  "tier": "core",
+  "au_exposure": "direct",
+  "sources": [
+   "https://www.rba.gov.au/payments-and-infrastructure/rits/system-availability-statistics/2026/pdf/payments-settlement-outage-20260127.pdf",
+   "https://www.rba.gov.au/media-releases/2026/mr-26-02.html",
+   "https://www.rba.gov.au/payments-and-infrastructure/rits/self-assessments/2026/material-developments.html"
+  ]
+ }
+]

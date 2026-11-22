@@ -1,0 +1,20 @@
+{
+  "f152": {
+    "rows": "216",
+    "revision": "34",
+    "outages": 90,
+    "changes": 42,
+    "share": "47%",
+    "share_ex_unclassified": "49%",
+    "share_since_2022": "51%",
+    "share_grade_b": "68%",
+    "share_grade_c": "33%",
+    "share_power": "17%",
+    "sens_changes": 43,
+    "sens_share": "48%"
+  },
+  "ausalert": {
+    "test_reach": "94%",
+    "ready_date": "1 October 2026"
+  }
+}

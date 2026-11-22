@@ -1,0 +1,8 @@
+# One regex per line. A match anywhere in content/ fails validation.
+10 November 2026
+\b89 (publicly|outages|sampled)
+of 89\b
+\b215 rows
+revision 33
+Claude
+research notes
