@@ -13,6 +13,7 @@ def load(path):
 
 
 def pct(n, d):
+    if not d: return "n/a"
     return f"{int(100 * n / d + 0.5)}%"
 
 
