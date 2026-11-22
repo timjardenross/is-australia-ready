@@ -58,7 +58,7 @@ def sources_table():
         if r["url"]: title = f'<a href="{esc(r["url"])}" rel="noopener">{title}</a>'
         rows.append(f'<tr id="{r["source_id"]}"><td><b>{r["source_id"]}</b></td><td>{title}</td><td>{esc(r["publisher"])}</td>'
                     f'<td>{esc(r["publication_date"])}</td><td>{esc(r["source_type"])}</td><td>{esc(r["locator"])}</td>'
-                    f'<td>{esc(r["finding_supported"])}</td><td>{esc(r["limits"])}</td></tr>')
+                    f'<td>{link_ids(esc(r["finding_supported"]))}</td><td>{esc(r["limits"])}</td></tr>')
     head = "<tr><th>ID</th><th>Source</th><th>Publisher</th><th>Date</th><th>Type</th><th>Locator</th><th>Supports</th><th>Limit</th></tr>"
     return f'<div class="tablewrap"><table class="data" data-filter><thead>{head}</thead><tbody>{"".join(rows)}</tbody></table></div>'
 
@@ -66,7 +66,7 @@ def findings_table():
     rows = []
     for r in findings:
         rows.append(f'<tr id="{r["ID"]}"><td><b>{r["ID"]}</b></td><td>{esc(r["theme"])}</td><td>{esc(r["finding"])}</td>'
-                    f'<td>{esc(r["source_IDs"])}</td><td>{esc(r["status_classification"])}</td><td>{esc(r["confidence"])}</td>'
+                    f'<td>{link_ids(esc(r["source_IDs"]))}</td><td>{esc(r["status_classification"])}</td><td>{esc(r["confidence"])}</td>'
                     f'<td>{esc(r["implementation_status_as_of_19_Nov_2026"])}</td><td>{esc(r["uncertainty_next_verification"])}</td></tr>')
     head = "<tr><th>ID</th><th>Theme</th><th>Finding</th><th>Sources</th><th>Status</th><th>Confidence</th><th>Implementation status</th><th>Next check</th></tr>"
     return f'<div class="tablewrap"><table class="data" data-filter><thead>{head}</thead><tbody>{"".join(rows)}</tbody></table></div>'
@@ -119,7 +119,7 @@ def main():
     f = fig["f152"]
     summ = (f'<div class="callout"><b>F152.</b> Change or software defects are the largest single cause of large outages: '
             f'{f["changes"]} of {f["outages"]} sampled outages ({f["share"]}). Not a majority. The register is a curated sample, not a census. '
-            f'Rows with a primary or official source show {f["share_grade_b"]}; rows with secondary sources only show {f["share_grade_c"]}. '
+            f'Grade B rows (primary or official source) show {f["share_grade_b"]}; grade C rows (secondary sources only) show {f["share_grade_c"]}. '
             f'Figures are computed from the rows below. See the <a href="d2.html">report</a>, section 8.</div>')
     (SITE / "register.html").write_text(page("register.html", "Outage register", intro("Outage register") + summ +
         '<input class="filter" placeholder="Filter outages" aria-label="Filter outages">' + register_table()), encoding="utf8")
@@ -130,6 +130,7 @@ def main():
         shutil.copy(CONTENT / "data" / f"{n}.json", SITE / "data" / f"{n}.json")
     shutil.copy(ROOT / "assets" / "style.css", SITE / "style.css")
     shutil.copy(ROOT / "assets" / "site.js", SITE / "site.js")
+    if (CONTENT / "media").exists(): shutil.copytree(CONTENT / "media", SITE / "media")
     (SITE / ".nojekyll").write_text("")
     print("built", len(list(SITE.glob("*.html"))), "pages")
 
